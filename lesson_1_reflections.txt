@@ -1,0 +1,58 @@
+Github is used to store previous versions of work and sort of like a 
+checkpoint when one sets out to implment new code. It becomes easier to 
+check and debug code with version control so its necessity is clear.
+It will be easier to detect problamatic code one if an issue or a 
+bug that did not previously exist comes up. Version control also allows 
+someone to keep track of all of their changes without a lot of extra work
+like saving files under different names for every proggress update one wants
+to keep. It is important to realize when to commit and how much. 
+Version control is most useful when paired with commit best practices. For 
+example if one goes a week without commiting into a project then a commit 
+would be too big and less helpful. Choosing when to commit is a matter a 
+user matter but generally a logical step as well any bug fixes can commited.
+Since file are related it is important that they are kept together since 
+they are all interelated and help the code function together. Git 
+automatically update all the file that are group together in what is 
+know as a repository. Using git log one can check the commit history of a 
+file and use the commit id to compare the differneces between two file. So 
+one would type "git diff id1 id2" this will show the differences between 
+two commits.
+//Lesson 2 reflections 
+//making repos and adding commits 
+
+In order to create a git repo, you can use the git init in git bash 
+this creates a repo with zero commits but you must be in the current folder 
+where you want to create the repo. If you wish to add indivdual files
+to the stage for a commit you use the command git add "name of the file."
+after setting up the stage you can commit the changes using git commit -m "
+coment" but for longer commit messages you need to setup a text editor for 
+git. commands such as git diff by itself show you the difference between 
+the workspace and the stage while git --staged shows you the difference 
+between you stage and the commit. The original git diff commit 1 and 
+commit2 shows the difference between two commits. So in total git allows 
+you to check the differneces between the stage, commits(repositroy), and 
+your working directory.
+// working in branches 
+You must choose when it is apporpriate to creat a new branch. For example 
+if you want to experiment with a new feature you can create a new branch 
+using git branch "name of branch goes here." git branch with no arguments 
+shows you a list of branches for the repository and shows you the one 
+that's checked out by placing an asterisk next to it.
+
+// git graph 
+used to visualize branches and commit changes in a more visually appealing
+manor and thus allows the user the opporuntity to better understand
+what the branches and commit history are using "git log --graph --oneline"
+
+//git merge branch1 branch2
+using git merge merges files based on the commit history. So git knows when 
+to keep certain lines of code and when not to. For example if the original 
+file was contained lines 1,2,3 and then your branch had code lines 235, and 
+then the master was updated to 1234 then the changes would be as the 
+following. when merging the files the new master branch would contain the 
+files 2345 because line 1 was not altered by master but was deleted from 
+the side branch. git is smart enouph to know what files to keep.
+//merged files 
+since the merge files are now shown by time stamps if you use git log it 
+may be difficult to fint the parent of some commits luckily you can use --> 
+"git show commit_id"
