@@ -1,3 +1,8 @@
 To create a new repository one must first create a respo on github and then set it up on git via a remote. On git one must create a repo 
 or have a repo they wish to push to gihub. Once you have that you must create a remote with the command git remote add "name of remote" 
 'link to the repostitory from github' Afterwards you must push the changes via git push 'remote name' 'branch' 
+
+//
+pulling and push must be done manually because one may not always need 
+access to the most current file or one might be trying to use experimental 
+code.
